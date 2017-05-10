@@ -34,3 +34,4 @@ runtime/
 *-local.php
 
 composer.lock
+config/db.php
