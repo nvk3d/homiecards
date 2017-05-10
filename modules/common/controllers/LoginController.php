@@ -16,8 +16,12 @@ class LoginController extends Controller
 {
     public function actionIndex($username = null, $password = null) {
         if (!$username || !$password) {
-            return Common::setStatusCode(204);
+            //return Common::setStatusCode(204);
+            return [
+                'success' => 'error',
+                'data' => 'no data'
+            ];
         }
-
+        return ['12'=>12];
     }
 }
