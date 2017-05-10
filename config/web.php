@@ -7,6 +7,9 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'modules' => [
+        'common' => [
+            'class' => 'app\modules\common\Module',
+        ],
         'game' => [
             'class' => 'app\modules\game\Module',
         ],
