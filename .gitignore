@@ -35,3 +35,5 @@ runtime/
 
 composer.lock
 config/db.php
+/web/index.php
+/web/index-test.php
