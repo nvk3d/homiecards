@@ -13,6 +13,9 @@ $config = [
         'game' => [
             'class' => 'app\modules\game\Module',
         ],
+        'api' => [
+            'class' => 'app\modules\api\Module',
+        ],
     ],
     'components' => [
         'request' => [
