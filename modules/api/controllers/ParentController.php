@@ -20,7 +20,9 @@ class ParentController extends Controller
     public function beforeAction($action)
     {
         $data = file_get_contents('php://input');
-        $this->data = ArrayHelper::toArray($data);
+        if (!empty($data)) {
+            $this->data = ArrayHelper::toArray(Json::decode($data));
+        }
         return parent::beforeAction($action);
     }
 
