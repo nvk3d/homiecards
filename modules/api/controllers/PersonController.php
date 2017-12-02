@@ -13,6 +13,7 @@ use app\modules\api\helpers\Helper;
 use app\modules\api\services\PersonService;
 use yii\filters\VerbFilter;
 use Yii;
+use yii\web\ForbiddenHttpException;
 
 class PersonController extends ParentController
 {
@@ -51,7 +52,8 @@ class PersonController extends ParentController
         if ($user) {
             return $user->toArray();
         }
-        Helper::Forbidden();
+
+        return Helper::Forbidden();
     }
 
     public function actionLogout()
@@ -63,6 +65,8 @@ class PersonController extends ParentController
 
     public function actionRegister()
     {
+        if (!Yii::$app->user->isGuest)
+
         return [
             'action' => $this->action->id
         ];

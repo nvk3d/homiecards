@@ -21,6 +21,6 @@ class Helper
     public static function Forbidden()
     {
         Yii::$app->response->setStatusCode(403, 'Access denied');
-        Yii::$app->response->send();
+        return Yii::$app->response->send();
     }
 }

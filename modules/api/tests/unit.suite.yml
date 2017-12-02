@@ -1,0 +1,12 @@
+# Codeception Test Suite Configuration
+#
+# Suite for unit or integration tests.
+
+class_name: UnitTester
+namespace: app\modules\api\tests\
+modules:
+    enabled:
+        - Yii2:
+            part: [orm, email, fixtures]
+        - Asserts
+        - app\modules\api\tests\Helper\Unit
