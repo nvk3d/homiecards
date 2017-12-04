@@ -6,8 +6,10 @@
  * Time: 14:09
  */
 
-namespace app\modules\api\entities;
+namespace app\modules\api\entities\User;
 
+
+use app\modules\api\entities\Id;
 
 class UserId extends Id
 {
